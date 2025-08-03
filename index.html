@@ -1,0 +1,79 @@
+<!-- HTML CODE: Paste in CodePen HTML panel (NO <html>, <head>, <body> tags needed!) -->
+
+<nav>
+  <div class="logo">
+    <img src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-2084-622f-bb9a-fe5dc0b34a7e/raw?se=2025-08-03T15%3A22%3A11Z&sp=r&sv=2024-08-04&sr=b&scid=c96d186c-c1b1-5bb0-990f-ceca072d903c&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-03T11%3A49%3A49Z&ske=2025-08-04T11%3A49%3A49Z&sks=b&skv=2024-08-04&sig=v2B0ihkp46bbyXq2c/WjgtGOMriq4xuKYDeo6h4swSk%3D" alt="VerduraPlate Logo" />
+    <span>VerduraPlate</span>
+  </div>
+  <div class="nav-links">
+    <a href="#" class="active">Menu</a>
+  </div>
+</nav>
+<section class="hero">
+  <h1>Savor Globally. Eat Vibrantly.</h1>
+  <p>Order authentic Indian, Indo-Chinese, Asian, and Italian cuisines online!</p>
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Search for dishes, cuisines..." autocomplete="off" />
+    <button type="submit">Search</button>
+  </form>
+</section>
+<main>
+  <div class="filters">
+    <select id="cuisine-filter">
+      <option value="">All Cuisines</option>
+      <option>Indian</option>
+      <option>Indo-Chinese</option>
+      <option>Italian</option>
+      <option>Asian</option>
+    </select>
+    <select id="diet-filter">
+      <option value="">All Diets</option>
+      <option>Vegetarian</option>
+      <option>Vegan</option>
+      <option>Non-Vegetarian</option>
+      <option>Gluten-Free</option>
+    </select>
+    <select id="sort-filter">
+      <option value="">Sort</option>
+      <option value="top-rated">Top Rated</option>
+      <option value="fastest">Fastest Delivery</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+    </select>
+  </div>
+  <div id="dish-list" class="dish-list"></div>
+</main>
+<footer>
+  <p>&copy; 2025 VerduraPlate. Craving delivered, globally inspired.</p>
+</footer>
+
+<!-- Floating Cart Button -->
+<button id="cart-btn" class="cart-btn">
+  <span class="cart-icon">🛒</span>
+  <span id="cart-count" class="cart-count">0</span>
+</button>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-modal-content">
+    <img class="cart-modal-logo" src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-2084-622f-bb9a-fe5dc0b34a7e/raw?se=2025-08-03T15%3A22%3A11Z&sp=r&sv=2024-08-04&sr=b&scid=c96d186c-c1b1-5bb0-990f-ceca072d903c&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-03T11%3A49%3A49Z&ske=2025-08-04T11%3A49%3A49Z&sks=b&skv=2024-08-04&sig=v2B0ihkp46bbyXq2c/WjgtGOMriq4xuKYDeo6h4swSk%3D" alt="VerduraPlate Logo" />
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total" class="cart-modal-total"></div>
+    <div class="cart-actions">
+      <button id="clear-cart-btn" class="cart-modal-cancel">Cancel Order</button>
+      <button id="place-order-btn" class="cart-modal-place">Place / Replace Order</button>
+      <button class="cart-modal-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Order Placed Modal -->
+<div id="order-placed-modal" class="cart-modal">
+  <div class="cart-modal-content">
+    <img class="cart-modal-logo" src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-2084-622f-bb9a-fe5dc0b34a7e/raw?se=2025-08-03T15%3A22%3A11Z&sp=r&sv=2024-08-04&sr=b&scid=c96d186c-c1b1-5bb0-990f-ceca072d903c&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-03T11%3A49%3A49Z&ske=2025-08-04T11%3A49%3A49Z&sks=b&skv=2024-08-04&sig=v2B0ihkp46bbyXq2c/WjgtGOMriq4xuKYDeo6h4swSk%3D" alt="VerduraPlate Logo" />
+    <h2>Congratulations, Your order is placed!</h2>
+    <div class="cart-modal-total" id="order-placed-total"></div>
+    <button class="cart-modal-close" id="order-placed-close">Close</button>
+  </div>
+</div>
